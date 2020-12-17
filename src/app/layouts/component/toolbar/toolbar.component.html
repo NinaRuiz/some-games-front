@@ -1,3 +1,11 @@
 <mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+          [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/hangman">Hangman</button>
+  </mat-menu>
+
   <span>Javascript Games</span>
 </mat-toolbar>

@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: BasicComponent,
     children: [
+      {
+        path: 'hangman',
+        loadChildren: () => import('../modules/hangman-game/hangman-game.module').then(m => m.HangmanGameModule)
+      }
     ]
   }
 ];
